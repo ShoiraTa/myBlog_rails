@@ -13,18 +13,13 @@
   <body>
   <%= render 'layouts/navbar' %>
 
-  <% flash.each do |name, msg|%>
-    <ul>
-      <li>
-      <%= msg %>
-      </li>
-    </ul>
+  <% if flash.any? %>
+    <%= render 'layouts/messages' %>
   <% end %>
-  <div>
-  <%= yield %>
 
+  <div>
+    <%= yield %>
   </div>
        <%= render 'layouts/footer' %>
-
   </body>
 </html>

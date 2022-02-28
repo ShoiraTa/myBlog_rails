@@ -34,9 +34,6 @@ footer{
   background-color: antiquewhite;
 }
 
-body{
-  max-height: 100vh;
-}
 
 .form {
   display: flex;
@@ -60,4 +57,12 @@ body{
 .form-h1{
   padding-left: 2rem;
   padding-TOP: 2rem;
+}
+
+.custom-card{
+  background-color: rgb(243, 194, 202);
+  color: rgba(175, 68, 68, 0.808);
+  padding: 2rem;
+  margin-left: 3.4rem;
+  border-radius: 5px;
 }

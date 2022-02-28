@@ -1,11 +1,7 @@
-<% if @article.errors.any? %>
-<h2 class= "mt-3">The following errors occured: </h2>
-  <ul> 
-    <% @article.errors.full_messages.each do |msg| %>  
-      <li><%= msg%></li>
-    <% end %>
-  </ul>
-<% end%>
+<% if  @article.errors.any?  %>
+<%= render 'shared/errors', obj: @article%>
+<% end %>
+
 
       <div class="row form">
         <%= form_for @article do |f| %>

@@ -1,0 +1,20 @@
+
+<div class="row d-flex justify-content-center p-3" >
+  <div class="col-sm-8" >
+    <div class="custom-card" >
+      <div class="custom-card-title" >
+      <h2>
+      <%= pluralize(obj.errors.count, 'error' )%>
+      prohibited article from being saved:
+      </h2>
+
+      <div class="custom-card-body">
+        <ul> 
+          <% obj.errors.full_messages.each do |msg| %>  
+            <li><%= msg%></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
