@@ -11,6 +11,18 @@
   </head>
 
   <body>
-    <%= yield %>
+  <%= render 'layouts/navbar' %>
+
+  <% flash.each do |name, msg|%>
+    <ul>
+      <li>
+      <%= msg %>
+      </li>
+    </ul>
+  <% end %>
+  <div class = "container">
+  <%= yield %>
+  </div>
+    
   </body>
 </html>

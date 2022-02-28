@@ -1,0 +1,12 @@
+<h1>Article id: <%= params[:id] %></h1>
+
+<p>
+  Ttile: <%= @article.title%>
+</p>
+
+<p>
+  Description: <%= @article.description%>
+</p>
+
+<%= link_to 'Edit this article', edit_article_url %> |
+<%= link_to 'See all articles', articles_url %> 
