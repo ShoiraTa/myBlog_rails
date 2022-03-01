@@ -1,15 +1,21 @@
 
-  <p>This message will be replaced by the response from /experiments.</p>
+<h2 class = "form-h1 text-center pb-2">Ttile: <%= @article.title%> <%= params[:id] %></h2>
 
-<h1 class = "form-h1">Article id: <%= params[:id] %></h1>
+<div class="well col-sm-8 d-flex justify-content-center flex-column align-content-center" >  
 
-<p>
-  Ttile: <%= @article.title%>
-</p>
+  <h4 class='text-center'> Description: </h4>
+  <hr> 
+  <div class="article-desc"> 
+    <p> <%= @article.description%> </p>
+  </div> 
 
-<p>
-  Description: <%= @article.description%>
-</p>
+  <hr> 
+  <div class='article-actions'>
+    <%= link_to 'Edit this article', edit_article_url, class: 'btn btn-xs btn-primary' %> 
+    <%= link_to 'Delete this article', article_path(@article), method: :delete, 
+                                      data: {confirm: 'Are you sure that you want to delete this article?'},
+                                      class: 'btn btn-xs btn-danger' %> 
+    <%= link_to 'See all articles', articles_url, class: 'btn btn-xs btn-success' %> 
+  </div>
 
-<%= link_to 'Edit this article', edit_article_url %> |
-<%= link_to 'See all articles', articles_url %> 
+</div>
