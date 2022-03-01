@@ -68,11 +68,28 @@ footer{
 }
 
 .well{
-  background-color: rgb(224, 221, 221);
+  background-color: rgb(238, 236, 236);
   margin: auto ;
   padding: 2rem;
+  border-radius: 5px;
 }
 
 .article-desc{
   min-height: 150px;
+}
+
+.article-title{
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.article-title a{
+  text-decoration: none;
+}
+
+.article-body{
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
