@@ -2,12 +2,17 @@
 
  
 <% @articles.each do |article|%>
-<div class="row" >
+<div>
   <div class="col-sm-8 m-auto" >
     <div class="well well-lg mb-2" >
 
     <div class = "article-title pb-2" >
        <%= link_to article.title,  article_path(article) %>
+    </div>
+
+    <div class="d-flex">
+      <p class="m-0 text-bold"> Created by: <%= article.user.username if article.user %>, </p>
+      <p  class="m-0">  at: <%= time_ago_in_words(article.created_at) %></p>
     </div>
     
     <div class = "article-body pb-2" >
