@@ -1,0 +1,12 @@
+<h1 class="text-center"> Welcome to <%= @user.username %> </h1>
+<div class='row d-flex justify-content-center flex-column align-items-center'>
+  <div class= 'col-md-4 text-center'> <%= image_tag @user.gravatar_url(:rating => 'R', :secure => true) %> </div>
+  <div class='text-center'> <%= @user.username %>'s articles</div>
+  <div class='d-flex justify-content-center mt-4  '>
+   <%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer)%>
+</div>
+  <%= render 'articles/article', obj: @user_articles %>
+    <div class='d-flex justify-content-center mt-4  '>
+   <%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer)%>
+</div>
+</div>

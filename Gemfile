@@ -48,7 +48,10 @@ gem "bootsnap", require: false
 gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
 gem "sassc-rails", '>= 2.1.0'
+gem 'gravtastic'
+gem 'will_paginate'
 
+gem 'bootstrap-will_paginate'
 # gem 'bootstrap-sass', '~> 3.4.1'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
