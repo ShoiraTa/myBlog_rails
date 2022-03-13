@@ -249,7 +249,8 @@ DEPENDENCIES
   gravtastic
   importmap-rails
   jbuilder
-  jquery-rails
+  jquery-rails (~> 4.3)
+  popper_js
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.2)
   sassc-rails (>= 2.1.0)

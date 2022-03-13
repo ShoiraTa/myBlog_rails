@@ -6,20 +6,54 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div class="navbar-nav justify-content-between me-auto mb-2 mb-lg-0 px-4" style="width: 100%;">
+      <% if logged_in? %>
+        <div class="d-flex">
+          <li> <%= link_to 'Home', root_path, class: 'nav-link' %></li> 
+          <li> <%= link_to 'All articles', articles_path, class: 'nav-link' %></li>
+          <li> <%= link_to 'All users', users_path, class:  'nav-link' %></li>
+          <li> <%= link_to 'New article', new_article_path, class:  'nav-link' %></li>
+          <li> <%= link_to 'My articles', user_path(current_user), class:  'nav-link' %></li>
+        </div>
+          <div class="d-flex">
+            <li> <%= link_to 'Logout', logout_path, method: :delete, class:  'nav-link' %></li>
+            <li> <%= link_to 'Edit account', edit_user_path(current_user), class:  'nav-link' %></li>
+          </div>
 
-        <li> <%= link_to 'Home', root_path, class: 'nav-link' %></li>
-        <li> <%= link_to 'About', about_path, class: 'nav-link' %></li>
-        <li> <%= link_to 'All articles', articles_path, class: 'nav-link' %></li>
-        <li> <%= link_to 'All users', users_path, class:  'nav-link' %></li>
-        <li> <%= link_to 'New article', new_article_path, class:  'nav-link' %></li>
-
-
-      </ul>
+        <% else %>
+         <div class="d-flex  justify-content-between" style="width: 100%;">
+          <li> <%= link_to 'Home', root_path, class: 'nav-link' %></li> 
+          <div class="d-flex ">
+          <li> <%= link_to 'Log in', login_path, class:  'nav-link' %></li>
+          <li> <%= link_to 'Sign up', signup_path, class:  'nav-link' %></li>
+          <div>
+         </div>
+        <% end %>
+      </div>
+      
+      
+<%
+=begin%>
+ 
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+
+      <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div> 
+<%
+=end%>
+
     </div>
   </div>
 </nav>

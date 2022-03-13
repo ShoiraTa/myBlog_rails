@@ -46,10 +46,11 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 
 gem 'bootstrap', '~> 5.1.3'
-gem 'jquery-rails'
+gem 'jquery-rails', "~> 4.3"
 gem "sassc-rails", '>= 2.1.0'
 gem 'gravtastic'
 gem 'will_paginate'
+gem 'popper_js'
 
 gem 'bootstrap-will_paginate'
 # gem 'bootstrap-sass', '~> 3.4.1'
