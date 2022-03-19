@@ -53,6 +53,7 @@ gem 'will_paginate'
 gem 'popper_js'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'rails-controller-testing'
 # gem 'bootstrap-sass', '~> 3.4.1'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
