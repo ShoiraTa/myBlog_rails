@@ -51,7 +51,7 @@ gem "sassc-rails", '>= 2.1.0'
 gem 'gravtastic'
 gem 'will_paginate'
 gem 'popper_js'
-
+gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 # gem 'bootstrap-sass', '~> 3.4.1'
 
